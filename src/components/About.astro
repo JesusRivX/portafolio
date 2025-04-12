@@ -1,0 +1,51 @@
+---
+import imagenAbout from "../assets/img.webp";
+---
+
+<section
+  id="#informacion"
+  class="flex flex-col gap-8 items-center justify-center px-8 py-24 dark:bg-[#001320] bg-[#f4f4f4]"
+>
+  <!-- Título general arriba de las columnas -->
+  <h2
+    class="text-3xl md:text-4xl font-bold text-[#525d86] text-center uppercase"
+  >
+    Sobre mi
+  </h2>
+
+  <article
+    class="max-w-5xl w-full flex flex-col md:flex-row items-center md:items-start gap-8"
+  >
+    <!-- Imagen (columna 1) -->
+    <div class="w-full md:w-1/2 flex justify-center items-center m-auto">
+      <img
+        src={imagenAbout.src}
+        alt="Imagen de presentación"
+        loading="lazy"
+        class="rounded-xl object-cover max-w-xs w-full h-auto shadow-md"
+      />
+    </div>
+
+    <!-- Texto (columna 2) -->
+    <div
+      class="w-full md:w-4xl text-gray-700 leading-relaxed text-base min-[376px]:text-[18px] m-auto"
+    >
+      <p class="mb-4 leading-9">
+        Hola, soy Ingeniero de Software orientado al Desarrollo Web, con un
+        enfoque claro en brindar soluciones eficientes a problemas complejos. Mi
+        trabajo se guía por valores sólidos como la
+        <strong class="font-semibold">
+          responsabilidad, puntualidad y liderazgo
+        </strong>
+        que se necesita en un equipo; gracias a ello, desarrollo software con propósito
+        y visión. Aspiro a convertirme en especialista en Ciberseguridad, porque
+        creo que la verdadera innovación también debe ser segura. Para mí, no existen
+        los límites, el límite lo pongo yo con ayuda de Dios.
+      </p>
+      <p class="font-semibold">
+        Trabajo como máquina <i class="fa-solid fa-robot"></i>, razono como
+        humano
+      </p>
+    </div>
+  </article>
+</section>

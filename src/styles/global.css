@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.badge {
+  @apply inline-flex items-center gap-2 bg-white border border-gray-200 px-3 py-1 rounded-full text-sm shadow-sm hover:shadow-md transition;
+}
+
+.carousel-button {
+  @apply px-2 py-1 rounded-md border border-white text-white text-xs bg-[#1f2937] hover:bg-[#374151] transition-all duration-200;
+}
+
+.carousel-button.active {
+  @apply px-4 bg-white text-[#1f2937] font-semibold;
+}

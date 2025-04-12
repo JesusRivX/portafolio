@@ -1,0 +1,211 @@
+---
+import img from "../assets/img.webp";
+import img1 from "../assets/img1.webp";
+import ts from "../assets/skills/ts.webp";
+---
+
+<section class="py-12 px-4 dark:bg-[#001320] bg-[#f4f4f4]">
+  <h2
+    class="text-3xl md:text-4xl font-bold text-[#525d86] uppercase text-center mb-10"
+  >
+    Proyectos
+  </h2>
+  <p
+    class="leading-9 text-xl text-gray-700 mt-2 mb-10 text-center max-w-3xl mx-auto"
+  >
+    En esta sección encontrarás mis proyectos más destacados, que reflejan la
+    calidad, el esfuerzo y la pasión que aporto en este mundo tecnológico.
+    <strong>¡Explora y descubre lo que puedo ofrecer!</strong>
+  </p>
+
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto"
+  >
+    <!-- Tarjeta Proyecto -->
+    <article
+      class="project-card bg-[#1c1a3c] rounded-xl overflow-hidden shadow-xl flex flex-col lg:flex-row mb-10"
+    >
+      <!-- Carrusel -->
+      <div
+        class="relative lg:w-1/2 w-full h-64 lg:h-full overflow-hidden carousel-container"
+      >
+        <div class="carousel-images h-full w-full relative">
+          <img
+            src={img.src}
+            class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
+          />
+          <img
+            src={img1.src}
+            class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
+          />
+          <img
+            src={ts.src}
+            class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
+          />
+        </div>
+
+        <!-- Controles -->
+        <div class="absolute bottom-3 right-3 flex items-center gap-2 z-10">
+          <button
+            class="carousel-nav left px-2 py-1 rounded-md border border-white text-white text-xs bg-[#1f2937] hover:bg-[#374151] transition-all"
+            >&larr;</button
+          >
+          <div class="carousel-indicators flex gap-1"></div>
+          <button
+            class="carousel-nav right px-2 py-1 rounded-md border border-white text-white text-xs bg-[#1f2937] hover:bg-[#374151] transition-all"
+            >&rarr;</button
+          >
+        </div>
+      </div>
+
+      <!-- Info del Proyecto -->
+      <div class="p-6 lg:w-1/2 w-full flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-semibold mb-2 text-white">
+            One Dark Vibrant Theme
+          </h3>
+          <span
+            class="inline-flex items-center text-sm bg-[#3b3b5c] text-white px-2 py-1 rounded-full mb-4"
+          >
+            <img src={ts.src} alt="VSCode Icon" class="w-4 h-4 mr-2" />
+            VSCode
+          </span>
+          <p class="text-gray-300 text-sm">
+            Un tema personalizado para Visual Studio Code, basado en el popular
+            One Dark.
+          </p>
+        </div>
+        <div class="mt-4 flex gap-2">
+          <a
+            href="#"
+            class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm"
+            >Código</a
+          >
+          <a
+            href="#"
+            class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-md text-sm"
+            >Preview</a
+          >
+        </div>
+      </div>
+    </article>
+
+    <!-- Tarjeta Proyecto -->
+    <article
+      class="project-card bg-[#1c1a3c] rounded-xl overflow-hidden shadow-xl flex flex-col lg:flex-row mb-10"
+    >
+      <!-- Carrusel -->
+      <div
+        class="relative lg:w-1/2 w-full h-64 lg:h-full overflow-hidden carousel-container"
+      >
+        <div class="carousel-images h-full w-full relative">
+          <img
+            src={img.src}
+            class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
+          />
+          <img
+            src={img1.src}
+            class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
+          />
+          <img
+            src={ts.src}
+            class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
+          />
+        </div>
+
+        <!-- Controles -->
+        <div class="absolute bottom-3 right-3 flex items-center gap-2 z-10">
+          <button
+            class="carousel-nav left px-2 py-1 rounded-md border border-white text-white text-xs bg-[#1f2937] hover:bg-[#374151] transition-all"
+            >&larr;</button
+          >
+          <div class="carousel-indicators flex gap-1"></div>
+          <button
+            class="carousel-nav right px-2 py-1 rounded-md border border-white text-white text-xs bg-[#1f2937] hover:bg-[#374151] transition-all"
+            >&rarr;</button
+          >
+        </div>
+      </div>
+
+      <!-- Info del Proyecto -->
+      <div class="p-6 lg:w-1/2 w-full flex flex-col justify-between">
+        <div>
+          <h3 class="text-2xl font-semibold mb-2 text-white">
+            One Dark Vibrant Theme
+          </h3>
+          <span
+            class="text-sm bg-[#3b3b5c] text-white px-2 py-1 rounded-full inline-block mb-4"
+            >VSCode</span
+          >
+          <p class="text-gray-300 text-sm">
+            Un tema personalizado para Visual Studio Code, basado en el popular
+            One Dark.
+          </p>
+        </div>
+        <div class="mt-4 flex gap-2">
+          <a
+            href="#"
+            class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm"
+            >Código</a
+          >
+          <a
+            href="#"
+            class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-md text-sm"
+            >Preview</a
+          >
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".project-card");
+
+    cards.forEach((card) => {
+      const images = card.querySelectorAll(".carousel-img");
+      const indicatorsContainer = card.querySelector(".carousel-indicators");
+      const prevBtn = card.querySelector(".carousel-nav.left");
+      const nextBtn = card.querySelector(".carousel-nav.right");
+
+      let currentIndex = 0;
+
+      const showImage = (index) => {
+        images.forEach((img, i) => {
+          img.style.opacity = i === index ? "1" : "0";
+        });
+
+        const allBtns = indicatorsContainer.querySelectorAll("button");
+        allBtns.forEach((btn, i) => {
+          btn.classList.toggle("active", i === index);
+        });
+
+        currentIndex = index;
+      };
+
+      // Crear botones numerados
+      images.forEach((_, i) => {
+        const btn = document.createElement("button");
+        btn.className = "carousel-button";
+        btn.textContent = i + 1;
+        btn.addEventListener("click", () => showImage(i));
+        indicatorsContainer.appendChild(btn);
+      });
+
+      // Botones de navegación
+      prevBtn.addEventListener("click", () => {
+        const newIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(newIndex);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        const newIndex = (currentIndex + 1) % images.length;
+        showImage(newIndex);
+      });
+
+      // Mostrar primera imagen
+      showImage(0);
+    });
+  });
+</script>
