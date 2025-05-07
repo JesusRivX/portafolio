@@ -1,0 +1,22 @@
+---
+const { href, colorLink, Icon, paragraph1, paragraph2 } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  class=`group flex justify-between items-center bg-[#f4f4f4] dark:bg-[#1e293b] border border-gray-200 dark:border-[#2a2f45] rounded-lg p-4 transition-all duration-300 hover:bg-[${colorLink}]/10 dark:hover:bg-[${colorLink}]/10 hover:border-[${colorLink}]`
+>
+  <div class="flex items-center space-x-4">
+    <div class=`contact-icon bg-[${colorLink}]`>
+      <i class={Icon}></i>
+    </div>
+    <div>
+      <p class="font-semibold">{paragraph1}</p>
+      <p class="text-sm text-gray-500 dark:text-gray-400">{paragraph2}</p>
+    </div>
+  </div>
+  <i
+    class="fas fa-arrow-up-right-from-square text-black dark:text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+  ></i>
+</a>

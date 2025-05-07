@@ -1,0 +1,110 @@
+---
+const { id } = Astro.props;
+import "../styles/global.css";
+import Information from "./component/information.astro";
+import Link from "./component/link.astro";
+---
+
+<section id={id} class="py-12 px-4 dark:bg-[#001320] bg-[#f4f4f4]">
+  <h2
+    class="text-3xl md:text-4xl font-extrabold text-center mb-4 uppercase text-[#525d86] dark:text-[#ffffff]"
+  >
+    Contacto
+  </h2>
+
+  <!-- Línea decorativa -->
+  <hr
+    class="w-24 h-1 mx-auto mb-10 bg-[#1e2231] dark:bg-[#7e84f5] rounded border-0"
+  />
+
+  <p
+    class="leading-9 text-xl text-gray-700 dark:text-[#ccd6f6] mt-2 mb-10 text-center max-w-3xl mx-auto px-2.5"
+  >
+    <strong>¿Buscas un nuevo integrante para tu equipo?</strong><br />
+    Cuenta conmigo! No dudes en escribirme, estaré encantado de escucharte y colaborar
+    en nuevos proyectos.
+  </p>
+
+  <div
+    class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start"
+  >
+    <!-- Información de Contacto -->
+    <div
+      class="hidden md:block bg-white dark:bg-[#0f172a] text-[#001320] dark:text-white rounded-xl shadow-lg p-6 space-y-6 border border-gray-200 dark:border-[#2c2f42]"
+    >
+      <h3
+        class="text-2xl font-semibold mb-4 text-center text-[#525d86] dark:text-[#ffffff]"
+      >
+        Información Personal
+      </h3>
+
+      <!-- Email -->
+      <Information
+        title="Carrera:"
+        description="Ingeniería de Software, Desarrollo Web"
+        icon="fas fa-map-marker-alt"
+      />
+
+      <!-- Teléfono -->
+      <Information
+        title="Idiomas:"
+        description="Español (Nativo) / Inglés (Básico)"
+        icon="fas fa-phone"
+      />
+
+      <!-- Ubicación -->
+      <Information
+        title="Ubicación:"
+        description="Lima, Perú"
+        icon="fas fa-map-marker-alt"
+      />
+    </div>
+
+    <!-- Conéctate conmigo -->
+    <div
+      class="bg-white dark:bg-[#0f172a] text-[#001320] dark:text-white rounded-xl shadow-lg p-6 space-y-4 border border-gray-200 dark:border-[#2c2f42]"
+    >
+      <h3
+        class="text-2xl font-semibold mb-4 text-[#525d86] dark:text-[#ffffff] text-center"
+      >
+        Enlaces de Contacto
+      </h3>
+
+      <!-- LinkedIn -->
+      <Link
+        href="https://www.linkedin.com/in/jes%C3%BAs-rivera-04058620a/"
+        colorLink="#0a66c2"
+        Icon="fab fa-linkedin"
+        paragraph1="Visita"
+        paragraph2="mi LinkedIn"
+      />
+
+      <!-- WhatsApp -->
+      <Link
+        href="https://wa.me/+51923329124"
+        colorLink="#25d366"
+        Icon="fab fa-whatsapp"
+        paragraph1="Escríbeme"
+        paragraph2="por WhatsApp"
+      />
+
+      <!-- Email -->
+      <Link
+        href="mailto:jr860086@gmail.com"
+        colorLink="#f4a261"
+        Icon="fas fa-envelope"
+        paragraph1="Contáctame"
+        paragraph2="vía Email"
+      />
+
+      <!-- GitHub -->
+      <Link
+        href="https://github.com/JesusRivX"
+        colorLink="#5953b3"
+        Icon="fab fa-github"
+        paragraph1="Proyectos"
+        paragraph2="en mi GitHub"
+      />
+    </div>
+  </div>
+</section>

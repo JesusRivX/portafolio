@@ -1,17 +1,23 @@
 ---
 import img from "../assets/img.webp";
 import img1 from "../assets/img1.webp";
-import ts from "../assets/skills/ts.webp";
+const { id } = Astro.props;
 ---
 
-<section class="py-12 px-4 dark:bg-[#001320] bg-[#f4f4f4]">
+<main id={id} class="py-12 px-4 dark:bg-[#0a192f] bg-[#ffffff]">
   <h2
-    class="text-3xl md:text-4xl font-bold text-[#525d86] uppercase text-center mb-10"
+    class="text-3xl md:text-4xl font-extrabold text-center mb-4 uppercase text-[#525d86] dark:text-[#ffffff]"
   >
     Proyectos
   </h2>
+
+  <!-- Línea decorativa -->
+  <hr
+    class="w-24 h-1 mx-auto mb-10 bg-[#1e2231] dark:bg-[#7e84f5] rounded border-0"
+  />
+
   <p
-    class="leading-9 text-xl text-gray-700 mt-2 mb-10 text-center max-w-3xl mx-auto"
+    class="leading-9 text-xl text-gray-700 dark:text-[#ccd6f6] mt-2 mb-10 text-center max-w-3xl mx-auto py-2.5"
   >
     En esta sección encontrarás mis proyectos más destacados, que reflejan la
     calidad, el esfuerzo y la pasión que aporto en este mundo tecnológico.
@@ -19,11 +25,11 @@ import ts from "../assets/skills/ts.webp";
   </p>
 
   <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto"
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 py-12 px-4 max-w-7xl mx-auto"
   >
     <!-- Tarjeta Proyecto -->
     <article
-      class="project-card bg-[#1c1a3c] rounded-xl overflow-hidden shadow-xl flex flex-col lg:flex-row mb-10"
+      class="project-card bg-[#f4f4f4] dark:bg-[#1e293b] rounded-xl overflow-hidden shadow-xl flex flex-col lg:flex-row mb-10"
     >
       <!-- Carrusel -->
       <div
@@ -38,10 +44,10 @@ import ts from "../assets/skills/ts.webp";
             src={img1.src}
             class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
           />
-          <img
+          <!-- <img
             src={ts.src}
             class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
-          />
+          /> -->
         </div>
 
         <!-- Controles -->
@@ -61,103 +67,49 @@ import ts from "../assets/skills/ts.webp";
       <!-- Info del Proyecto -->
       <div class="p-6 lg:w-1/2 w-full flex flex-col justify-between">
         <div>
-          <h3 class="text-2xl font-semibold mb-2 text-white">
-            One Dark Vibrant Theme
+          <h3 class="text-2xl font-bold mb-2 text-[#525d86] dark:text-white">
+            Proyecto 1
           </h3>
           <span
-            class="inline-flex items-center text-sm bg-[#3b3b5c] text-white px-2 py-1 rounded-full mb-4"
+            class="inline-flex items-center text-sm bg-white dark:bg-[#001320] text-gray-700 dark:text-white px-2 py-1 rounded-full mb-4"
           >
-            <img src={ts.src} alt="VSCode Icon" class="w-4 h-4 mr-2" />
-            VSCode
+            <img
+              src="https://icon.icepanel.io/Technology/png-shadow-512/Astro.png"
+              alt="VSCode Icon"
+              class="w-6 h-6 mr-2"
+            />
+            Astro
           </span>
-          <p class="text-gray-300 text-sm">
-            Un tema personalizado para Visual Studio Code, basado en el popular
-            One Dark.
+          <p class="text-gray-700 dark:text-[#ccd6f6] text-sm">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+            accusamus ipsa veritatis eum nesciunt provident reiciendis natus aut
+            quos quod.
           </p>
         </div>
         <div class="mt-4 flex gap-2">
           <a
             href="#"
-            class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm"
-            >Código</a
+            class="inline-flex items-center bg-white dark:bg-[#001320] text-gray-700 dark:text-white px-4 py-2 rounded-md text-sm gap-3"
           >
-          <a
+            <i class="fa-brands fa-github text-2xl dark:text-white"></i>
+            Código
+          </a>
+          <!-- <a
             href="#"
             class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-md text-sm"
             >Preview</a
-          >
-        </div>
-      </div>
-    </article>
-
-    <!-- Tarjeta Proyecto -->
-    <article
-      class="project-card bg-[#1c1a3c] rounded-xl overflow-hidden shadow-xl flex flex-col lg:flex-row mb-10"
-    >
-      <!-- Carrusel -->
-      <div
-        class="relative lg:w-1/2 w-full h-64 lg:h-full overflow-hidden carousel-container"
-      >
-        <div class="carousel-images h-full w-full relative">
-          <img
-            src={img.src}
-            class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
-          />
-          <img
-            src={img1.src}
-            class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
-          />
-          <img
-            src={ts.src}
-            class="carousel-img absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
-          />
-        </div>
-
-        <!-- Controles -->
-        <div class="absolute bottom-3 right-3 flex items-center gap-2 z-10">
-          <button
-            class="carousel-nav left px-2 py-1 rounded-md border border-white text-white text-xs bg-[#1f2937] hover:bg-[#374151] transition-all"
-            >&larr;</button
-          >
-          <div class="carousel-indicators flex gap-1"></div>
-          <button
-            class="carousel-nav right px-2 py-1 rounded-md border border-white text-white text-xs bg-[#1f2937] hover:bg-[#374151] transition-all"
-            >&rarr;</button
-          >
-        </div>
-      </div>
-
-      <!-- Info del Proyecto -->
-      <div class="p-6 lg:w-1/2 w-full flex flex-col justify-between">
-        <div>
-          <h3 class="text-2xl font-semibold mb-2 text-white">
-            One Dark Vibrant Theme
-          </h3>
-          <span
-            class="text-sm bg-[#3b3b5c] text-white px-2 py-1 rounded-full inline-block mb-4"
-            >VSCode</span
-          >
-          <p class="text-gray-300 text-sm">
-            Un tema personalizado para Visual Studio Code, basado en el popular
-            One Dark.
-          </p>
-        </div>
-        <div class="mt-4 flex gap-2">
-          <a
-            href="#"
-            class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm"
-            >Código</a
-          >
-          <a
-            href="#"
-            class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-md text-sm"
-            >Preview</a
-          >
+          > -->
         </div>
       </div>
     </article>
   </div>
-</section>
+</main>
+
+<!-- Degradado entre secciones -->
+<div
+  class="h-32 w-full bg-gradient-to-b from-[#ffffff] to-[#f4f4f4] dark:from-[#0a192f] dark:via-[#071a2d] dark:to-[#001320]"
+>
+</div>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {

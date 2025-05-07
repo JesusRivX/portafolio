@@ -13,3 +13,7 @@
 .carousel-button.active {
   @apply px-4 bg-white text-[#1f2937] font-semibold;
 }
+
+.contact-icon {
+  @apply w-10 h-10 rounded-lg flex items-center justify-center text-white text-lg;
+}

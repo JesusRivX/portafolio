@@ -1,11 +1,12 @@
 ---
-import Welcome from "../components/Welcome.astro";
+import Inicio from "../components/Inicio.astro";
 import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
-import Tecnology from "../components/Tecnology.astro";
+import Tool from "../components/Tool.astro";
 import Proyects from "../components/Proyects.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
+import Menu from "../components/Menu.astro";
 import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -13,10 +14,11 @@ import "../styles/global.css";
 ---
 
 <Layout>
-  <Welcome id="principal" />
+  <Inicio id="principal" />
   <About id="informacion" />
-  <Tecnology />
-  <Proyects />
-  <Contact />
+  <Tool id="herramientas" />
+  <Proyects id="proyectos" />
+  <Contact id="contacto" />
   <Footer />
+  <Menu />
 </Layout>

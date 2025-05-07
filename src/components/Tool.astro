@@ -1,0 +1,158 @@
+---
+const { id } = Astro.props;
+import Skill from "./component/skill.astro";
+---
+
+<section
+  id={id}
+  class="py-12 px-4 bg-[#f4f4f4] text-gray-800 dark:bg-[#001320] dark:text-white text-center"
+>
+  <h2
+    class="text-3xl md:text-4xl font-extrabold text-center mb-4 uppercase text-[#525d86] dark:text-[#ffffff]"
+  >
+    Mis Habilidades
+  </h2>
+
+  <!-- Línea decorativa -->
+  <hr
+    class="w-24 h-1 mx-auto mb-10 bg-[#1e2231] dark:bg-[#7e84f5] rounded border-0"
+  />
+
+  <p
+    class="leading-9 text-xl text-gray-700 dark:text-[#ccd6f6] mt-2 mb-10 text-center max-w-3xl mx-auto px-2.5"
+  >
+    Estas son las herramientas y metodologías que aplico en el desarrollo de mis
+    aplicaciones, junto con aquellas que actualmente estoy perfeccionando para
+    mejorar mi enfoque y adaptabilidad a los requerimientos del entorno laboral.
+  </p>
+
+  <div
+    class="flex flex-col lg:flex-row justify-center items-start gap-10 max-w-6xl mx-auto mt-10"
+  >
+    <!-- Habilidades Principales -->
+    <article
+      class="bg-white dark:bg-[#0f172a] p-6 rounded-xl shadow-lg w-full lg:w-1/2 border border-gray-200 dark:border-[#2c2f42]"
+    >
+      <h3
+        class="text-2xl font-semibold mb-6 text-[#525d86] dark:text-[#ffffff]"
+      >
+        Habilidades Principales
+      </h3>
+      <div class="grid grid-cols-2 gap-6 sm:grid-cols-3">
+        <!-- Astro -->
+        <Skill
+          img="https://icon.icepanel.io/Technology/png-shadow-512/Astro.png"
+          title="Astro"
+          colorBorder="#ff5d01"
+          colorBg="rgba(255,93,1,0.1)"
+        />
+
+        <!-- Tailwind -->
+        <Skill
+          img="https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg"
+          title="Tailwind"
+          colorBorder="#38bdf8"
+          colorBg="rgba(56,189,248,0.1)"
+        />
+
+        <!-- Typescript -->
+        <Skill
+          img="https://icon.icepanel.io/Technology/svg/TypeScript.svg"
+          title="Typescript"
+          colorBorder="#3178c6"
+          colorBg="rgba(49,120,198,0.1)"
+        />
+
+        <!-- Java -->
+        <Skill
+          img="https://icon.icepanel.io/Technology/svg/Java.svg"
+          title="Java"
+          colorBorder="#ea2d2e"
+          colorBg="rgba(234,45,46,0.1)"
+        />
+
+        <!-- Laravel -->
+        <Skill
+          img="https://icon.icepanel.io/Technology/svg/Laravel.svg"
+          title="Laravel"
+          colorBorder="#ff2d20"
+          colorBg="rgba(255,45,32,0.1)"
+        />
+
+        <!-- MySQL -->
+        <Skill
+          img="https://icon.icepanel.io/Technology/svg/MySQL.svg"
+          title="MySQL"
+          colorBorder="#00758f"
+          colorBg="rgba(0,117,143,0.1)"
+        />
+
+        <!-- Git -->
+        <Skill
+          img="https://icon.icepanel.io/Technology/svg/Git.svg"
+          title="Git"
+          colorBorder="#f1502f"
+          colorBg="rgba(241,80,47,0.1)"
+        />
+
+        <!-- Linux -->
+        <Skill
+          img="https://icon.icepanel.io/Technology/png-shadow-512/Linux.png"
+          title="Linux"
+          colorBorder="#fcc624"
+          colorBg="rgba(252,198,36,0.1)"
+        />
+      </div>
+    </article>
+
+    <!-- Habilidades en Desarrollo -->
+    <article
+      class="bg-white dark:bg-[#0f172a] p-6 rounded-xl shadow-lg w-full lg:w-1/2 border border-gray-200 dark:border-[#2c2f42]"
+    >
+      <h3
+        class="text-2xl font-semibold mb-6 text-[#525d86] dark:text-[#ffffff]"
+      >
+        Habilidades en Desarrollo
+      </h3>
+      <div class="grid grid-cols-2 gap-6">
+        <!-- React -->
+        <Skill
+          img="https://icon.icepanel.io/Technology/svg/React.svg"
+          title="React"
+          colorBorder="#61dafb"
+          colorBg="rgba(97,218,251,0.1)"
+        />
+
+        <!-- Python -->
+        <Skill
+          img="https://cdn-icons-png.flaticon.com/512/5968/5968350.png"
+          title="Python"
+          colorBorder="#3776ab"
+          colorBg="rgba(55,118,171,0.1)"
+        />
+
+        <!-- Spring -->
+        <Skill
+          img="https://icon.icepanel.io/Technology/svg/Spring.svg"
+          title="Spring"
+          colorBorder="#6db33f"
+          colorBg="rgba(109,179,63,0.1)"
+        />
+
+        <!-- Ingles
+        <Skill
+          img="https://cdn-icons-png.flaticon.com/512/197/197484.png"
+          title="Inglés"
+          colorBorder="#00247d"
+          colorBg="rgba(0,36,125,0.1)"
+        /> -->
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Degradado entre secciones -->
+<div
+  class="h-32 w-full bg-gradient-to-b from-[#f4f4f4] to-[#ffffff] dark:from-[#001320] dark:to-[#0a192f]"
+>
+</div>

@@ -1,0 +1,17 @@
+---
+const { title, description, icon } = Astro.props;
+---
+
+<div
+  class="flex items-start space-x-4 bg-[#eaeaea] dark:bg-[#1e293b] p-4 rounded-lg"
+>
+  <div
+    class="w-10 h-10 flex items-center justify-center my-auto bg-[#0f172a] rounded-full text-white text-lg"
+  >
+    <i class={icon}></i>
+  </div>
+  <div>
+    <p class="font-semibold">{title}</p>
+    <p>{description}</p>
+  </div>
+</div>

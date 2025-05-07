@@ -1,20 +1,23 @@
 ---
 import imagenAbout from "../assets/img.webp";
+const { id } = Astro.props;
 ---
 
-<section
-  id="#informacion"
-  class="flex flex-col gap-8 items-center justify-center px-8 py-24 dark:bg-[#001320] bg-[#f4f4f4]"
->
+<section id={id} class="px-4 py-12 dark:bg-[#0a192f] bg-[#ffffff]">
   <!-- Título general arriba de las columnas -->
   <h2
-    class="text-3xl md:text-4xl font-bold text-[#525d86] text-center uppercase"
+    class="text-3xl md:text-4xl font-extrabold text-center mb-4 uppercase text-[#525d86] dark:text-[#ffffff]"
   >
     Sobre mi
   </h2>
 
+  <!-- Línea decorativa -->
+  <hr
+    class="w-24 h-1 mx-auto mb-10 bg-[#1e2231] dark:bg-[#7e84f5] rounded border-0"
+  />
+
   <article
-    class="max-w-5xl w-full flex flex-col md:flex-row items-center md:items-start gap-8"
+    class="mx-auto max-w-7xl w-full flex flex-col lg:flex-row items-center md:items-start gap-8"
   >
     <!-- Imagen (columna 1) -->
     <div class="w-full md:w-1/2 flex justify-center items-center m-auto">
@@ -22,30 +25,33 @@ import imagenAbout from "../assets/img.webp";
         src={imagenAbout.src}
         alt="Imagen de presentación"
         loading="lazy"
-        class="rounded-xl object-cover max-w-xs w-full h-auto shadow-md"
+        class="rounded-xl object-cover sm:max-w-xs w-full h-auto shadow-md"
       />
     </div>
 
     <!-- Texto (columna 2) -->
     <div
-      class="w-full md:w-4xl text-gray-700 leading-relaxed text-base min-[376px]:text-[18px] m-auto"
+      class="w-full text-gray-700 dark:text-[#ccd6f6] leading-relaxed text-base min-[376px]:text-[18px] m-auto"
     >
-      <p class="mb-4 leading-9">
-        Hola, soy Ingeniero de Software orientado al Desarrollo Web, con un
-        enfoque claro en brindar soluciones eficientes a problemas complejos. Mi
-        trabajo se guía por valores sólidos como la
-        <strong class="font-semibold">
-          responsabilidad, puntualidad y liderazgo
-        </strong>
-        que se necesita en un equipo; gracias a ello, desarrollo software con propósito
-        y visión. Aspiro a convertirme en especialista en Ciberseguridad, porque
-        creo que la verdadera innovación también debe ser segura. Para mí, no existen
-        los límites, el límite lo pongo yo con ayuda de Dios.
-      </p>
-      <p class="font-semibold">
-        Trabajo como máquina <i class="fa-solid fa-robot"></i>, razono como
-        humano
+      <p class="leading-9 px-2.5">
+        Hola, soy estudiante de la UTP en la carrera de Ingeniería de Software,
+        con orientación al Desarrollo Web, con un enfoque en ofrecer soluciones
+        eficientes a problemas complejos. Me guío de los valores como la
+        <strong class="font-semibold"
+          >disciplina, responsabilidad y proactividad</strong
+        >, esenciales para trabajar en equipo y desarrollar software con
+        propósito. Busco mi primera experiencia profesional, donde pueda aplicar
+        mis conocimientos, seguir aprendiendo y aportar ideas innovadoras. A
+        corto plazo, quiero fortalecer mis bases en desarrollo; a largo plazo,
+        especializarme en Ciberseguridad, porque creo que la verdadera
+        innovación también debe ser segura.
       </p>
     </div>
   </article>
 </section>
+
+<!-- Degradado entre secciones -->
+<div
+  class="h-32 w-full bg-gradient-to-b from-[#ffffff] to-[#f4f4f4] dark:from-[#0a192f] dark:via-[#071a2d] dark:to-[#001320]"
+>
+</div>
