@@ -5,7 +5,8 @@ const { href, ariaLabel, iconClass, textColor } = Astro.props;
 <a
   href={href}
   aria-label={ariaLabel}
-  class=`bg-gray-300 rounded-full max-sm:w-10 max-sm:h-10 w-13 h-13 flex items-center justify-center hover:bg-gray-200 group md:text-2xl text-[${textColor}]`
+  class="bg-gray-300 rounded-full max-sm:w-10 max-sm:h-10 w-13 h-13 flex items-center justify-center hover:bg-gray-200 group md:text-2xl"
+  style={`color: ${textColor};`}
   target="_blank"
 >
   <i class={iconClass}></i>

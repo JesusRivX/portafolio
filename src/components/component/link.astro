@@ -5,10 +5,16 @@ const { href, colorLink, Icon, paragraph1, paragraph2 } = Astro.props;
 <a
   href={href}
   target="_blank"
-  class=`group flex justify-between items-center bg-[#f4f4f4] dark:bg-[#1e293b] border border-gray-200 dark:border-[#2a2f45] rounded-lg p-4 transition-all duration-300 hover:bg-[${colorLink}]/10 dark:hover:bg-[${colorLink}]/10 hover:border-[${colorLink}]`
+  class="group flex justify-between items-center bg-[#f4f4f4] dark:bg-[#1e293b] border border-transparent dark:border-[#2a2f45] rounded-lg p-4 transition-all duration-300"
+  style={`--link-color: ${colorLink};`}
+  onmouseover="this.style.borderColor = 'var(--link-color)';"
+  onmouseleave="this.style.backgroundColor = ''; this.style.borderColor = 'transparent';"
 >
   <div class="flex items-center space-x-4">
-    <div class=`contact-icon bg-[${colorLink}]`>
+    <div
+      class="w-10 h-10 rounded-lg flex items-center justify-center text-white text-lg"
+      style={`background-color: var(--link-color);`}
+    >
       <i class={Icon}></i>
     </div>
     <div>

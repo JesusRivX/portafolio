@@ -3,7 +3,10 @@ const { img, title, colorBorder, colorBg } = Astro.props;
 ---
 
 <div
-  class=`flex flex-col items-center bg-[#f4f4f4] dark:bg-[#1e293b] border border-transparent p-4 rounded-[10px] transition duration-300 hover:border-[${colorBorder}] dark:hover:border-[${colorBorder}] hover:bg-[${colorBg}] dark:hover:bg-[${colorBg}]`
+  class="flex flex-col items-center bg-[#f4f4f4] dark:bg-[#1e293b] border border-transparent p-4 rounded-[10px] transition duration-300"
+  style={`--border-hover-color: ${colorBorder}; --bg-hover-color: ${colorBg};`}
+  onmouseover="this.style.borderColor = 'var(--border-hover-color)'; this.style.backgroundColor = 'var(--bg-hover-color)';"
+  onmouseleave="this.style.borderColor = 'transparent'; this.style.backgroundColor = '';"
 >
   <img src={img} alt={title} class="w-12 h-12" />
   <span class="mt-2">{title}</span>
